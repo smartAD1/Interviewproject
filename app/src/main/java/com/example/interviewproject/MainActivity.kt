@@ -20,18 +20,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        createFragment()
     }
 
     override fun onResume() {
         super.onResume()
         viewModel.fetchData()
-    }
-
-    private fun createFragment() {
-        val mainFragment = MainFragment()
-        supportFragmentManager.beginTransaction()
-            .add(R.id.pageFragment,mainFragment).commit()
-
     }
 }

@@ -2,31 +2,35 @@ package com.example.interviewproject.Page
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.interviewproject.Adapter.MainAdapter
-import com.example.interviewproject.Model.Response.GithubResponseItem
 import com.example.interviewproject.R
+import com.example.interviewproject.Utils.safeNavigate
 import com.example.interviewproject.ViewModel.MainViewModel
 import com.example.interviewproject.ViewModelFactory.MainViewModelFactory
 import kotlinx.android.synthetic.main.fragment_main.*
 
 interface ItemClick {
-    fun getCallBack(data: GithubResponseItem)
+    fun getCallBack(login: String)
 }
 
 class MainFragment : Fragment(),ItemClick {
 
 
     private var viewModel: MainViewModel? = null
+    private val navController: NavController by lazy { findNavController() }
     private val adapter: MainAdapter by lazy {
-        MainAdapter()
+        MainAdapter(this)
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,12 +58,14 @@ class MainFragment : Fragment(),ItemClick {
                 adapter.notifyDataSetChanged()
             })
             errorMessage.observe(viewLifecycleOwner, Observer {
-
+                Log.d("errorData","$it")
             })
         }
     }
 
-    override fun getCallBack(data: GithubResponseItem) {
-        TODO("Not yet implemented")
+    override fun getCallBack(login: String) {
+        val bundle = Bundle()
+        bundle.putString("id",login)
+        navController.navigate(R.id.action_mainFragment2_to_userContentFragment,bundle)
     }
 }
