@@ -10,6 +10,6 @@ interface ApiService {
 
     @GET("users")
     fun fetchData(@Query("since") since: String = "0", @Query("per_page")
-    page: String = "10"): Single<Response<GithubResponse>>
+    page: String = "100"): Single<Response<GithubResponse>>
 
 }
