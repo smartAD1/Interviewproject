@@ -1,8 +1,6 @@
-package com.example.interviewproject.ViewModel
+package com.example.interviewproject.viewModel
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.interviewproject.Model.Response.GithubResponse
 import io.reactivex.disposables.CompositeDisposable
 
 abstract class BaseViewModel :ViewModel() {

@@ -1,11 +1,10 @@
-package com.example.interviewproject.ViewModelFactory
+package com.example.interviewproject.viewModelFactory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.interviewproject.Model.Repository.DataRepository
-import com.example.interviewproject.Page.MainFragment
-import com.example.interviewproject.ViewModel.MainViewModel
-import com.example.interviewproject.ViewModel.UserContentViewModel
+import com.example.interviewproject.model.repository.DataRepository
+import com.example.interviewproject.viewModel.MainViewModel
+import com.example.interviewproject.viewModel.UserContentViewModel
 
 class MainViewModelFactory : ViewModelProvider.Factory {
 

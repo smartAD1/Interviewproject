@@ -1,11 +1,11 @@
-package com.example.interviewproject.Adapter.ViewHolder
+package com.example.interviewproject.adapter.viewHolder
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.interviewproject.Model.Response.GithubResponse
-import com.example.interviewproject.Page.ItemClick
+import com.example.interviewproject.model.response.GithubResponse
+import com.example.interviewproject.page.ItemClick
 import kotlinx.android.synthetic.main.item_list_user.view.*
 
 class MainViewHolder(view: View): RecyclerView.ViewHolder(view) {

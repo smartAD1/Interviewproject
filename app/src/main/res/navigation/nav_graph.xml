@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment2"
-        android:name="com.example.interviewproject.Page.MainFragment"
+        android:name="com.example.interviewproject.page.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/userContentFragment"
-        android:name="com.example.interviewproject.Page.UserContentFragment"
+        android:name="com.example.interviewproject.page.UserContentFragment"
         android:label="fragment_user_content"
         tools:layout="@layout/fragment_user_content" >
         <action

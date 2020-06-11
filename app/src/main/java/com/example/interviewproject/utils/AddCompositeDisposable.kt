@@ -1,6 +1,5 @@
-package com.example.interviewproject.Utils
+package com.example.interviewproject.utils
 
-import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 

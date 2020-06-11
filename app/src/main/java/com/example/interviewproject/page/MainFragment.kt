@@ -1,4 +1,4 @@
-package com.example.interviewproject.Page
+package com.example.interviewproject.page
 
 import android.os.Bundle
 import android.util.Log
@@ -11,11 +11,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.interviewproject.Adapter.MainAdapter
+import com.example.interviewproject.adapter.MainAdapter
 import com.example.interviewproject.R
-import com.example.interviewproject.Utils.safeNavigate
-import com.example.interviewproject.ViewModel.MainViewModel
-import com.example.interviewproject.ViewModelFactory.MainViewModelFactory
+import com.example.interviewproject.viewModel.MainViewModel
+import com.example.interviewproject.viewModelFactory.MainViewModelFactory
 import kotlinx.android.synthetic.main.fragment_main.*
 
 interface ItemClick {

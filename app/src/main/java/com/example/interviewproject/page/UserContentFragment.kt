@@ -1,4 +1,4 @@
-package com.example.interviewproject.Page
+package com.example.interviewproject.page
 
 import android.os.Bundle
 import android.util.Log
@@ -13,11 +13,9 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.interviewproject.R
-import com.example.interviewproject.ViewModel.MainViewModel
-import com.example.interviewproject.ViewModel.UserContentViewModel
-import com.example.interviewproject.ViewModelFactory.MainViewModelFactory
+import com.example.interviewproject.viewModel.UserContentViewModel
+import com.example.interviewproject.viewModelFactory.MainViewModelFactory
 import kotlinx.android.synthetic.main.fragment_user_content.*
-import kotlinx.android.synthetic.main.item_list_user.view.*
 
 class UserContentFragment : Fragment() {
 

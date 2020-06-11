@@ -2,13 +2,9 @@ package com.example.interviewproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.interviewproject.Model.Response.GithubResponseItem
-import com.example.interviewproject.Page.MainFragment
-import com.example.interviewproject.ViewModel.MainViewModel
-import com.example.interviewproject.ViewModelFactory.MainViewModelFactory
+import com.example.interviewproject.viewModel.MainViewModel
+import com.example.interviewproject.viewModelFactory.MainViewModelFactory
 
 
 

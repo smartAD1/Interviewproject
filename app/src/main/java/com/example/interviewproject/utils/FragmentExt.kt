@@ -1,4 +1,4 @@
-package com.example.interviewproject.Utils
+package com.example.interviewproject.utils
 
 import android.os.Bundle
 import androidx.annotation.IdRes

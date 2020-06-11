@@ -1,11 +1,11 @@
-package com.example.interviewproject.ViewModel
+package com.example.interviewproject.viewModel
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.interviewproject.Model.Repository.DataRepository
-import com.example.interviewproject.Model.Response.UserResponse
-import com.example.interviewproject.Utils.addComp
+import com.example.interviewproject.model.repository.DataRepository
+import com.example.interviewproject.model.response.UserResponse
+import com.example.interviewproject.utils.addComp
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 

@@ -1,7 +1,7 @@
-package com.example.interviewproject.ApiService
+package com.example.interviewproject.apiService
 
-import com.example.interviewproject.Model.Response.GithubResponse
-import com.example.interviewproject.Model.Response.UserResponse
+import com.example.interviewproject.model.response.GithubResponse
+import com.example.interviewproject.model.response.UserResponse
 import io.reactivex.Single
 import retrofit2.Response
 import retrofit2.http.GET
