@@ -13,10 +13,6 @@
         <action
             android:id="@+id/action_mainFragment2_to_userContentFragment"
             app:destination="@id/userContentFragment" />
-        <argument
-            android:name="id"
-            app:argType="string"
-            android:defaultValue='""'/>
 
     </fragment>
     <fragment
@@ -27,5 +23,9 @@
         <action
             android:id="@+id/action_userContentFragment_to_mainFragment2"
             app:destination="@id/mainFragment2" />
+        <argument
+            android:name="id"
+            app:argType="string"
+            android:defaultValue='""' />
     </fragment>
 </navigation>

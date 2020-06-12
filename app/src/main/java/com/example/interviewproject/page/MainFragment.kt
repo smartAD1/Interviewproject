@@ -16,6 +16,7 @@ import com.example.interviewproject.R
 import com.example.interviewproject.viewModel.MainViewModel
 import com.example.interviewproject.viewModelFactory.MainViewModelFactory
 import kotlinx.android.synthetic.main.fragment_main.*
+import kotlin.math.log
 
 interface ItemClick {
     fun getCallBack(login: String)
@@ -63,8 +64,10 @@ class MainFragment : Fragment(),ItemClick {
     }
 
     override fun getCallBack(login: String) {
-        val bundle = Bundle()
-        bundle.putString("id",login)
-        navController.navigate(R.id.action_mainFragment2_to_userContentFragment,bundle)
+//        val bundle = Bundle()
+//        bundle.putString("id",login)
+        val args = MainFragmentDirections.actionMainFragment2ToUserContentFragment(login)
+//        navController.navigate(R.id.action_mainFragment2_to_userContentFragment,bundle)
+        navController.navigate(args)
     }
 }

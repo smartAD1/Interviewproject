@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.interviewproject.R
@@ -24,19 +25,20 @@ class UserContentFragment : Fragment() {
         ViewModelProvider(this, MainViewModelFactory()).get(UserContentViewModel::class.java)
     }
     private val navController: NavController by lazy { findNavController() }
+    private val args: UserContentFragmentArgs by navArgs()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
         inflater.inflate(R.layout.fragment_user_content, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        arguments?.let {
-            id = it.getString("id") ?: ""
-        }
+//        arguments?.let {
+//            id = it.getString("id") ?: ""
+//        }
+        id = args.id
         viewModel.fetchUserData(id)
         viewModel.run {
             userData.observe(viewLifecycleOwner, Observer {
-                Log.d("myViewData","$it")
                 context?.let {contexts->
                     Glide.with(contexts).load(it.avatarUrl).apply(RequestOptions.circleCropTransform()).into(userPicture)
                     isUserName.text = it.name
