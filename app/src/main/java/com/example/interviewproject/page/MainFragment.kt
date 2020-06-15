@@ -64,8 +64,8 @@ class MainFragment : Fragment(),ItemClick {
     }
 
     override fun getCallBack(login: String) {
-        val bundle = Bundle()
-        bundle.putString("id",login)
+//        val bundle = Bundle()
+//        bundle.putString("id",login)
         val args = MainFragmentDirections.actionMainFragment2ToUserContentFragment(login)
         navController.navigate(R.id.action_mainFragment2_to_userContentFragment)
         navController.navigate(args)

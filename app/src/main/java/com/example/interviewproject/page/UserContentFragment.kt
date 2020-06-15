@@ -27,7 +27,11 @@ class UserContentFragment : Fragment() {
     private val navController: NavController by lazy { findNavController() }
     private val args: UserContentFragmentArgs by navArgs()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? =
         inflater.inflate(R.layout.fragment_user_content, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,8 +43,9 @@ class UserContentFragment : Fragment() {
         viewModel.fetchUserData(id)
         viewModel.run {
             userData.observe(viewLifecycleOwner, Observer {
-                context?.let {contexts->
-                    Glide.with(contexts).load(it.avatarUrl).apply(RequestOptions.circleCropTransform()).into(userPicture)
+                context?.let { contexts ->
+                    Glide.with(contexts).load(it.avatarUrl)
+                        .apply(RequestOptions.circleCropTransform()).into(userPicture)
                     isUserName.text = it.name
                     bio.text = it.bio
                     locationStr.text = it.location
@@ -51,7 +56,7 @@ class UserContentFragment : Fragment() {
                 }
             })
             errorMessage.observe(viewLifecycleOwner, Observer {
-                Log.d("errorData","$it")
+                Log.d("errorData", "$it")
             })
         }
 
