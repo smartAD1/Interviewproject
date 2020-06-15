@@ -31,11 +31,6 @@ class MainFragment : Fragment(),ItemClick {
         MainAdapter(this)
     }
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
         inflater.inflate(R.layout.fragment_main, container, false)
 
@@ -64,10 +59,13 @@ class MainFragment : Fragment(),ItemClick {
     }
 
     override fun getCallBack(login: String) {
+//        TODO old transfer Bundle
 //        val bundle = Bundle()
 //        bundle.putString("id",login)
+//        navController.navigate(R.id.action_mainFragment2_to_userContentFragment)
+//        TODO this new transfer safeArgs
         val args = MainFragmentDirections.actionMainFragment2ToUserContentFragment(login)
-        navController.navigate(R.id.action_mainFragment2_to_userContentFragment)
         navController.navigate(args)
+
     }
 }

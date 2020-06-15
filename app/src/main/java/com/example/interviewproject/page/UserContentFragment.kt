@@ -27,18 +27,16 @@ class UserContentFragment : Fragment() {
     private val navController: NavController by lazy { findNavController() }
     private val args: UserContentFragmentArgs by navArgs()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? =
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
         inflater.inflate(R.layout.fragment_user_content, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+//        TODO old getBundle
 //        arguments?.let {
 //            id = it.getString("id") ?: ""
 //        }
+//      TODO this is use new transfer safeArgs
         id = args.id
         viewModel.fetchUserData(id)
         viewModel.run {
@@ -59,9 +57,8 @@ class UserContentFragment : Fragment() {
                 Log.d("errorData", "$it")
             })
         }
-
         close.setOnClickListener {
-            navController.navigate(R.id.action_userContentFragment_to_mainFragment2)
+            navController.popBackStack()
         }
     }
 
