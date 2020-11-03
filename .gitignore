@@ -1,4 +1,4 @@
-*.iml
+b *.iml
 .gradle
 /local.properties
 /.idea/caches
@@ -12,3 +12,13 @@
 /captures
 .externalNativeBuild
 .cxx
+/.idea/.gitignore
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/compiler.xml
+/.idea/gradle.xml
+/.idea/misc.xml
+/.idea/codeStyles/Project.xml
+/.idea/vcs.xml
+/.idea/modules/app/InterViewProject.app.iml
+/.idea/modules/InterViewProject.iml
+/.idea/jarRepositories.xml

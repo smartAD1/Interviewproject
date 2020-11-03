@@ -6,8 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import com.example.interviewproject.model.repository.DataRepository
 import com.example.interviewproject.model.response.UserResponse
 import com.example.interviewproject.utils.addComp
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.schedulers.Schedulers
 
 class UserContentViewModel(private val dataRepository: DataRepository) : BaseViewModel() {
     val userData: LiveData<UserResponse> get() = userTmpData

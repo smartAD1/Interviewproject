@@ -1,9 +1,9 @@
 package com.example.interviewproject.utils
 
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.disposables.Disposable
+import io.reactivex.rxjava3.disposables.CompositeDisposable
+import io.reactivex.rxjava3.disposables.Disposable
 
 
-    fun Disposable.addComp(compositeDisposable : CompositeDisposable) {
+fun Disposable.addComp(compositeDisposable : CompositeDisposable) {
         compositeDisposable.add(this)
     }
